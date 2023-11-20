@@ -12,7 +12,7 @@ export const load: PageServerLoad = async ({ locals, params }) => {
 	const { slug } = params;
 
 	// TODO: 게시글 상세 내역 불러와서 넘기기
-	const res = await axios.get(`${process.env.VUE_APP_API_BASE_URL}/api/posts/${slug}`, {
+	const res = await axios.get(`http://43.201.161.245:8080/api/posts/${slug}`, {
 		headers
 	});
 

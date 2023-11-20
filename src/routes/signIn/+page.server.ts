@@ -29,7 +29,7 @@ export const actions = {
 		};
 
 		try {
-			await axios.post(`${process.env.VUE_APP_API_BASE_URL}/api/users/login`, sendData);
+			await axios.post(`http://43.201.161.245:8080/api/users/login`, sendData);
 			status = true;
 		} catch (error) {
 			status = false;

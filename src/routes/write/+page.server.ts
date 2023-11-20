@@ -37,10 +37,7 @@ export const actions: Actions = {
 		let imgDataUrl;
 
 		try {
-			const res = await axios.post(
-				`${process.env.VUE_APP_IMAGE_BASE_URL}/post/mayack/${userId}`,
-				formData
-			);
+			const res = await axios.post(`http://168.188.123.234:8080/post/mayack/${userId}`, formData);
 			imgDataUrl = res.data;
 		} catch (error) {
 			console.error(error);
@@ -62,7 +59,7 @@ export const actions: Actions = {
 		};
 
 		try {
-			await axios.post(`${process.env.VUE_APP_API_BASE_URL}/api/posts`, sendData, {
+			await axios.post(`http://43.201.161.245:8080/api/posts`, sendData, {
 				headers
 			});
 			status = true;
